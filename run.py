@@ -104,6 +104,21 @@ def question_session_handler(name):
 
     return score
 
+def answer_checker(given, actual):
+    """
+    Takes user input (given) and spreadsheet data (actual) for comparison
+    Checks and prints error on console if invalid entry made by user
+    Notifies user of right / wrong answer
+    Returns correct variable if right answer enered by user
+    """
+    if given == actual or given.upper() == actual:
+        print(
+            f"\n\n>>> Well done! Your answer is Correct! <<<\n\n")
+        return 'correct'
+    else:
+        print(
+            f"\n\n>> Thats wrong :( Correct answer is option {actual} <<\n\n")
+            
 def main():
     welcome_and_instructions()
     name = start()
