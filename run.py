@@ -118,10 +118,11 @@ def answer_checker(given, actual):
     else:
         print(
             f"\n\n>> Thats wrong :( Correct answer is option {actual} <<\n\n")
-            
+
 def main():
     welcome_and_instructions()
     name = start()
     final = question_session_handler(name)
 
 main()
+
