@@ -100,7 +100,7 @@ def question_session_handler(name):
         if question_number < 10:
             print(
                 f"Your Current Score : {int(score[1])} / {question_number} \n")
-        input("Press any key to continue\n\n")
+        input("Press Enter key to continue\n\n")
 
     return score
 
