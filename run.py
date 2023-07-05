@@ -127,6 +127,19 @@ def scorer(score, value):
     if value == 'correct':
         score[1] += 1
 
+def result_thank_you(score):
+    """
+    Updates score(name & score) in the scores worksheet
+    Prints finish message and score on the console
+    """
+    SHEET.worksheet('scores').append_row(score)
+    print("******************************************************************")
+    print("    ********************************************************\n")
+    print(f"      Congratulations {score[0]}!!! on completing the game! \n")
+    print(f"                Your Scored : {score[1]} out of 10 \n")
+    print("    ********************************************************")
+    print("******************************************************************")
+
 def main():
     welcome_and_instructions()
     name = start()
