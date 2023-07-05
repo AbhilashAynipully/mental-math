@@ -140,6 +140,25 @@ def result_thank_you(score):
     print("    ********************************************************")
     print("******************************************************************")
 
+def restart():
+    """
+    Allows user to restart or exit the game at end
+    Checks for invalid response
+    """
+    print("\n\nDo you wish to play again?\n")
+    response = input("Press Y or y to restart, N or n to exit :")
+    if response == "Y" or response == "y":
+        main()
+    elif response == "N" or response == "n":
+        time.sleep(1.5)
+        print("\nSorry to see you leave :( \n")
+        time.sleep(1)
+        print("Please do come back whenever you are ready :)")
+        exit()
+    else:
+        print(f"\nInvalid response! you entered: {response}\n")
+        restart()
+
 def main():
     welcome_and_instructions()
     name = start()
