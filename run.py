@@ -13,6 +13,7 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('mental_math')
 
+
 def welcome_and_instructions():
     """
     Prints welcome message on console
@@ -28,6 +29,7 @@ def welcome_and_instructions():
     print("- Each question will have 4 options 'A','B','C,'D'\n")
     print("- To choose option 'A' as answer type A or a and press enter\n")
     print("- There are no negative marking for wrong answers\n")
+
 
 def start():
     """
@@ -65,6 +67,7 @@ def start():
         print(f"\nPlease enter a valid response!, you entered: {response} \n")
         start()
     return name
+
 
 def question_session_handler(name):
     """
@@ -104,6 +107,7 @@ def question_session_handler(name):
 
     return score
 
+
 def answer_checker(given, actual):
     """
     Takes user input (given) and spreadsheet data (actual) for comparison
@@ -119,6 +123,7 @@ def answer_checker(given, actual):
         print(
             f"\n\n>> Thats wrong :( Correct answer is option {actual} <<\n\n")
 
+
 def scorer(score, value):
     """
     Takes return values from question_session_handler & answer_checker function
@@ -126,6 +131,7 @@ def scorer(score, value):
     """
     if value == 'correct':
         score[1] += 1
+
 
 def result_thank_you(score):
     """
@@ -139,6 +145,7 @@ def result_thank_you(score):
     print(f"                Your Scored : {score[1]} out of 10 \n")
     print("    ********************************************************")
     print("******************************************************************")
+
 
 def restart():
     """
@@ -159,11 +166,13 @@ def restart():
         print(f"\nInvalid response! you entered: {response}\n")
         restart()
 
+
 def main():
     welcome_and_instructions()
     name = start()
     final = question_session_handler(name)
     result_thank_you(final)
     restart()
+
 
 main()
