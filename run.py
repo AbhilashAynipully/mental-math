@@ -19,7 +19,7 @@ def welcome_and_instructions():
     Prints welcome message on console
     Prints instructions for the user to follow
     """
-    print("Welcome to Mental Math Game!!!")
+    print(" Welcome to Mental Math Game!!!")
     print("-------------------------------")
     print("-------------------------------\n")
     time.sleep(1.5)
@@ -84,7 +84,7 @@ def question_session_handler(name):
     for num in range(2, 12):
         question_number = (num - 1)
         question = questions_sheet.cell(num, 2).value
-        print(f"Q{question_number}) {question}\n")
+        print(f" Q{question_number}) {question}\n")
 
         valid_options = ("A", "a", "B", "b", "C", "c", "D", "d",)
         while True:
