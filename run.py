@@ -119,6 +119,14 @@ def answer_checker(given, actual):
         print(
             f"\n\n>> Thats wrong :( Correct answer is option {actual} <<\n\n")
 
+def scorer(score, value):
+    """
+    Takes return values from question_session_handler & answer_checker function
+    Increments score if user enters right answer
+    """
+    if value == 'correct':
+        score[1] += 1
+
 def main():
     welcome_and_instructions()
     name = start()
