@@ -65,3 +65,42 @@ def start():
         print(f"\nPlease enter a valid response!, you entered: {response} \n")
         start()
     return name
+
+def question_session_handler(name):
+    """
+    Creates score variable and stores user name and score in it
+    Generates questions and options from spreadsheet to terminal
+    Validates user input and notifies invalid response
+    For valid input using answer_checker provides response to user
+    Updates score (using scorer function) and prints the score on terminal
+    Returns score
+    """
+    score = [name, 0]
+
+    questions_sheet = SHEET.worksheet("questions")
+    for num in range(2, 12):
+        question_number = (num - 1)
+        question = questions_sheet.cell(num, 2).value
+        print(f"Q{question_number}) {question}\n")
+
+        valid_options = ("A", "a", "B", "b", "C", "c", "D", "d",)
+        while True:
+            answer_given = input(
+                "Please type your answer (A,B,C,D or a,b,c,d)\n")
+            if answer_given not in valid_options:
+                print(
+                    f"\nInvalid response! you entered {answer_given}\n\n")
+            else:
+                break
+        actual_answer = questions_sheet.cell(num, 3).value
+        is_correct = answer_checker(answer_given, actual_answer)
+
+        scorer(score, is_correct)
+        time.sleep(1)
+        if question_number < 10:
+            print(
+                f"Your Current Score : {int(score[1])} / {question_number} \n")
+        input("Press any key to continue\n\n")
+
+    return score
+
