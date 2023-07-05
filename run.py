@@ -104,3 +104,9 @@ def question_session_handler(name):
 
     return score
 
+def main():
+    welcome_and_instructions()
+    name = start()
+    final = question_session_handler(name)
+
+main()
