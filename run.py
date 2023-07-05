@@ -23,7 +23,7 @@ def welcome_and_instructions():
     print("-------------------------------")
     print("-------------------------------\n")
     time.sleep(1.5)
-    print("Please read the below instructions carefully :")
+    print(" Please read the below instructions carefully :")
     print("**********************************************\n")
     print("- There will be a total of 10 questions\n")
     print("- Each question will have 4 options 'A','B','C,'D'\n")
@@ -38,13 +38,13 @@ def start():
     For invalid input shows error promt and informs customer
     Returns user name
     """
-    response = input("Press Y or y to continue, N or n to exit:\n")
+    response = input(" Press Y or y to continue, N or n to exit:\n")
     if response == "Y" or response == "y":
-        print("\n\n\nGreat!!! Lets start the game... \n\n")
+        print("\n\n\n Great!!! Lets start the game... \n\n")
         time.sleep(1.5)
         while True:
             name = input(
-                "Enter your Name (Aplhanumeric and max 30 characters):\n")
+                " Enter your Name (Aplhanumeric and max 30 characters):\n")
             if name.isalnum() is not True:
                 print(" >>> Invalid Response!!! <<<")
                 print(
@@ -54,17 +54,17 @@ def start():
                 print("\n >> Only 30 characters allowed <<\n")
             else:
                 break
-        print(f"\n\n\nHi {name}, are you ready?")
-        print("\n\nHere comes the first question!\n\n\n")
+        print(f"\n\n\n Hi {name}, are you ready?")
+        print("\n\n Here comes the first question!\n\n\n")
         time.sleep(2)
     elif response == "N" or response == "n":
         time.sleep(1.5)
-        print("\nSorry to see you leave :( \n")
+        print("\n Sorry to see you leave :( \n")
         time.sleep(1)
-        print("Please do come back whenever you are ready :)")
+        print(" Please do come back whenever you are ready :)")
         exit()
     else:
-        print(f"\nPlease enter a valid response!, you entered: {response} \n")
+        print(f"\n Please enter a valid response! you entered: {response} \n")
         start()
     return name
 
@@ -89,10 +89,10 @@ def question_session_handler(name):
         valid_options = ("A", "a", "B", "b", "C", "c", "D", "d",)
         while True:
             answer_given = input(
-                "Please type your answer (A,B,C,D or a,b,c,d)\n")
+                " Please type your answer (A,B,C,D or a,b,c,d)\n")
             if answer_given not in valid_options:
                 print(
-                    f"\nInvalid response! you entered {answer_given}\n\n")
+                    f"\n Invalid response! you entered {answer_given}\n\n")
             else:
                 break
         actual_answer = questions_sheet.cell(num, 3).value
@@ -102,8 +102,8 @@ def question_session_handler(name):
         time.sleep(1)
         if question_number < 10:
             print(
-                f"Your Current Score : {int(score[1])} / {question_number} \n")
-        input("Press Enter key to continue\n\n")
+                f" Your Current Score : {int(score[1])} / {question_number}")
+        input("\n Press Enter key to continue\n\n")
 
     return score
 
@@ -152,18 +152,18 @@ def restart():
     Allows user to restart or exit the game at end
     Checks for invalid response
     """
-    print("\n\nDo you wish to play again?\n")
-    response = input("Press Y or y to restart, N or n to exit:\n")
+    print("\n\n Do you wish to play again?\n")
+    response = input(" Press Y or y to restart, N or n to exit:\n")
     if response == "Y" or response == "y":
         main()
     elif response == "N" or response == "n":
         time.sleep(1.5)
-        print("\nSorry to see you leave :( \n")
+        print("\n Sorry to see you leave :( \n")
         time.sleep(1)
-        print("Please do come back whenever you are ready :)")
+        print(" Please do come back whenever you are ready :)")
         exit()
     else:
-        print(f"\nInvalid response! you entered: {response}\n")
+        print(f"\n Invalid response! you entered: {response}\n")
         restart()
 
 
