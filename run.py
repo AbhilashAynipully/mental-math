@@ -164,5 +164,6 @@ def main():
     name = start()
     final = question_session_handler(name)
     result_thank_you(final)
+    restart()
 
 main()
