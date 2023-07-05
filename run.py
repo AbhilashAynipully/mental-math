@@ -38,7 +38,7 @@ def start():
     For invalid input shows error promt and informs customer
     Returns user name
     """
-    response = input("Press Y or y to continue, N or n to exit :")
+    response = input("Press Y or y to continue, N or n to exit:\n")
     if response == "Y" or response == "y":
         print("\n\n\nGreat!!! Lets start the game... \n\n")
         time.sleep(1.5)
@@ -153,7 +153,7 @@ def restart():
     Checks for invalid response
     """
     print("\n\nDo you wish to play again?\n")
-    response = input("Press Y or y to restart, N or n to exit :")
+    response = input("Press Y or y to restart, N or n to exit:\n")
     if response == "Y" or response == "y":
         main()
     elif response == "N" or response == "n":
