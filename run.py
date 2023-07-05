@@ -144,5 +144,6 @@ def main():
     welcome_and_instructions()
     name = start()
     final = question_session_handler(name)
+    result_thank_you(final)
 
 main()
