@@ -1,8 +1,8 @@
 # Mental Math
 
-Mental Math is a terminal game which is python based, it runs on mock terminal on Heroku made by Code Institute.
+Mental Math is a terminal game which is Python based, it runs on a mock terminal on Heroku made by Code Institute.
 
-User of the game needs to solve a set of 10 mathematical questions, the intention should be to resolve them mentally rather than using any aids like calculator or by writing down on paper. The motive is to test ones mathematical skills and ultimately have fun solving these questions.
+User of the game needs to solve a set of 10 mathematical questions, the intention is to resolve them mentally rather than using any aid like a calculator or by writing down on paper. The motive is to test ones mathematical skills and ultimately have fun solving these questions.
 
 [ >>> Click here for live version of project <<<](https://mental-math-466801bbea0a.herokuapp.com/)
 
@@ -15,11 +15,11 @@ User of the game needs to solve a set of 10 mathematical questions, the intentio
 - Player can continue to start playing the game by typing in Y or y after reading instructions.
 - Players need to enter their name before starting the game which will be saved along with score once the game ends.
 - Name has to be Alphanumeric (a to z , A to Z or 0 to 9) and should have maximum 30 characters. No special characters.
-- After entering name one question along with 4 options (A,B,C,D) will appear on screen at a time .
+- After entering name, one question along with 4 options (A,B,C,D) will appear on screen at a time .
 - Player can confirm their answer by typing in A,B,C,D or a,b,c,d. Other inputs will show Invalid Input notification.
-- After entering answer the console will display if the answer is correct, if not it will display the correct answer.
-- After each question score will be displayed and player can press enter to continue to next question.
-- After 10th (last) question user will get to see the final result and an option to restart the game if they wish to.
+- After entering an answer the console will display if the answer is correct, if not it will display the correct answer.
+- After each question score will be displayed and the player can press enter to continue to next question.
+- After 10th (last) question user will see the final result and an option to restart the game if they wish to.
 
 
 ## Features
@@ -54,9 +54,6 @@ User of the game needs to solve a set of 10 mathematical questions, the intentio
 - Provide new set of questions if user restarts game
 
 
-## Data Model
-
-
 ## Testing
 
 The following tests were done to check the projects proper functionality
@@ -70,8 +67,8 @@ The following tests were done to check the projects proper functionality
 #### Solved Bugs
 
     - When the code was initially tested on PEP8 linter, errors were found due to length of certain line of codes. As there is a limit of 79 characters per line, these were restructured.
-    - Data on spreadsheet and question_session_handler were restructured in order to avoid exceeding the google API request quotas, this was leading to read request errors initially. 
-    - Data (Questions) on the spreadsheet had to reformatted for it to appear properly on the Heroku terminal as they had text content longer than 80 characters.
+    - Data on spreadsheet and question_session_handler function were restructured in order to avoid exceeding the google API request quotas, this was leading to read request errors initially. 
+    - Data (Questions) on the spreadsheet had to be reformatted for it to appear properly on the Heroku terminal as they had text content longer than 80 characters.
 
 #### Unsolved Bugs
 
