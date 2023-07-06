@@ -26,6 +26,19 @@ User of the game needs to solve a set of 10 mathematical questions, the intentio
 
 ### Existing Features
 
+- Welcome message with game instructions
+  ![welcome message and instructions](assets/images/welcome-instructions.png)
+
+- Invalid input detection and notification
+  ![invalid inputs](assets/images/invalid-response.png)
+
+- Maintains and notifies score throughout the game
+  ![current score display](assets/images/score-update.png)
+
+  ![final score](assets/images/end-score.png)
+
+- Records Player Name and Score on score worksheet
+  ![score record](assets/images/score-record.png)
 
 ### Future Features
 
