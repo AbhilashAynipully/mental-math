@@ -53,14 +53,13 @@ The following tests were done to check the projects proper functionality
     - Data on spreadsheet and question_session_handler were restructured in order to avoid exceeding the google API request quotas, this was leading to read request errors initially. 
     - Data (Questions) on the spreadsheet had to reformatted for it to appear properly on the Heroku terminal as they had text content longer than 80 characters.
 
-### Unsolved Bugs
+#### Unsolved Bugs
 
     - No unsolved bugs remaining
 
 ### Validator Testing
 
-    - PEP8
-     - No errors found on pep8ci.herokuapp.com
+    - No errors found on pep8ci.herokuapp.com
 
 
 ## Deployment
@@ -79,5 +78,4 @@ The project was deployed using mock terminal on Heroku made by Code Institute.
 
 - Thanks to Mr Anthony Ugwu for being a great mentor. He guided me through this projects with his feedback and suggestions. 
 - Thanks to Code Institute for providing with template and deployment terminal.
-- Thanks to www.google.com for providing with questions for the test.
 - All codes were written by me.
