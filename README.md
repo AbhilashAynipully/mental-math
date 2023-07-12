@@ -47,7 +47,7 @@ User of the game needs to solve a set of 10 mathematical questions, the intentio
 
   ![score record](assets/images/score-record.png)
 
-  [ScoresheetLink] : (https://docs.google.com/spreadsheets/d/e/2PACX-1vRHtH1L6v7yLg2khtr9KpUW0DvZkV6rLFUJ38s1zkc5puSi6OsAw86cUR9_G9OlBzierRb28KjHE8Hm/pubhtml?gid=323336629&single=true)
+  [Scores Link](https://docs.google.com/spreadsheets/d/e/2PACX-1vRHtH1L6v7yLg2khtr9KpUW0DvZkV6rLFUJ38s1zkc5puSi6OsAw86cUR9_G9OlBzierRb28KjHE8Hm/pubhtml?gid=323336629&single=true)
 
 ### Future Features
 
